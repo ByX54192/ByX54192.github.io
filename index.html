@@ -145,7 +145,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/CTF-d/" style="font-size: 10px;">CTF.d</a> <a href="/tags/VMTools/" style="font-size: 10px;">VMTools</a> <a href="/tags/kali-linux/" style="font-size: 10px;">kali linux</a>
+                        <a href="/tags/CTF-d/" style="font-size: 10px;">CTF.d</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/VMTools/" style="font-size: 10px;">VMTools</a> <a href="/tags/kali-linux/" style="font-size: 10px;">kali linux</a>
                     </div>
                 </section>
                 
@@ -220,6 +220,121 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-Shadowsocks" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/12/30/Shadowsocks/" class="article-date">
+      <time datetime="2017-12-30T03:37:34.000Z" itemprop="datePublished">2017-12-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/30/Shadowsocks/">Shadowsocks快速安装方案</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <blockquote>
+<p>在学习计算机知识时，借助互联网资源是每个Coder所必须具备的能力。除了国内的百度搜索引擎外，国外最强势的Google搜索在国内被封禁，所以为了查资料学习，用shadowsocks实现翻墙上网是一种可靠的解决方案。</p>
+</blockquote>
+<p>##ShadowSocks安装方案如下</p>
+<h3 id="1-安装步骤"><a href="#1-安装步骤" class="headerlink" title="1. 安装步骤"></a>1. 安装步骤</h3><h4 id="Debian-Ubuntu"><a href="#Debian-Ubuntu" class="headerlink" title="Debian/Ubuntu:"></a>Debian/Ubuntu:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get install python-pip</span><br><span class="line">pip install shadowsocks</span><br></pre></td></tr></table></figure>
+<h4 id="CentOS"><a href="#CentOS" class="headerlink" title="CentOS:"></a>CentOS:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install python-setuptools &amp;&amp; easy_install pip</span><br><span class="line">pip install shadowsocks</span><br></pre></td></tr></table></figure>
+<h3 id="2-创建并配置用户json文件"><a href="#2-创建并配置用户json文件" class="headerlink" title="2.创建并配置用户json文件"></a>2.创建并配置用户json文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">在终端输入vi /etc/shadowsocks.json创建配置文件</span><br><span class="line"></span><br><span class="line">按 i 插入</span><br><span class="line"></span><br><span class="line">插入以下内容（用户数任意，注意最后一个用户密码后面没有逗号）</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"><span class="string">"server"</span>:<span class="string">"my_server_ip"</span>,  <span class="comment">#填入你的IP地址</span></span><br><span class="line"> <span class="string">"local_address"</span>: <span class="string">"127.0.0.1"</span>,</span><br><span class="line"> <span class="string">"local_port"</span>:1080,</span><br><span class="line"> <span class="string">"port_password"</span>: &#123;</span><br><span class="line">    <span class="string">"8381"</span>: <span class="string">"foobar1"</span>,    <span class="comment">#端口号，密码</span></span><br><span class="line">    <span class="string">"8382"</span>: <span class="string">"foobar2"</span>,</span><br><span class="line">    <span class="string">"8383"</span>: <span class="string">"foobar3"</span>,</span><br><span class="line">    <span class="string">"8384"</span>: <span class="string">"foobar4"</span></span><br><span class="line"> &#125;,</span><br><span class="line"><span class="string">"timeout"</span>:300,</span><br><span class="line"> <span class="string">"method"</span>:<span class="string">"aes-256-cfb"</span>,</span><br><span class="line"><span class="string">"fast_open"</span>: <span class="literal">false</span>    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">然后按Esc退出编辑，按<span class="built_in">shift</span>+:，输入wq，回车，就保存退出了。</span><br></pre></td></tr></table></figure>
+<h3 id="3-启动命令及配置"><a href="#3-启动命令及配置" class="headerlink" title="3.启动命令及配置"></a>3.启动命令及配置</h3><p><strong>有两种方式启动，前端和后端</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">前端启动：ssserver -c /etc/shadowsocks.json；</span><br><span class="line">后端启动：ssserver -c /etc/shadowsocks.json -d start；</span><br><span class="line">停止：ssserver -c /etc/shadowsocks.json -d stop；</span><br><span class="line">重启(修改配置要重启才生效)：ssserver -c /etc/shadowsocks.json -d restart</span><br></pre></td></tr></table></figure>
+<p><strong>设置开机启动</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">在终端输入vi /etc/rc.local</span><br><span class="line">把里面最后的带有ssserver的一大段默认的代码删除掉</span><br><span class="line">再把ssserver -c /etc/shadowsocks.json -d start加进去</span><br><span class="line">按wq保存退出</span><br><span class="line">到此就配置好，放飞自我吧！</span><br></pre></td></tr></table></figure>
+<h3 id="3-配置项说明"><a href="#3-配置项说明" class="headerlink" title="3.配置项说明"></a>3.配置项说明</h3><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>server</td>
+<td>the address your server listens</td>
+</tr>
+<tr>
+<td>server_port</td>
+<td>server port</td>
+</tr>
+<tr>
+<td>local_address</td>
+<td>the address your local listens</td>
+</tr>
+<tr>
+<td>local_port</td>
+<td>local port</td>
+</tr>
+<tr>
+<td>password</td>
+<td>password used for encryption</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>in seconds</td>
+</tr>
+<tr>
+<td>method</td>
+<td>default: “aes-256-cfb”, see Encryption</td>
+</tr>
+<tr>
+<td>fast_open</td>
+<td>use TCP_FASTOPEN, true / false</td>
+</tr>
+<tr>
+<td>workers</td>
+<td>number of workers, available on Unix/Linux</td>
+</tr>
+</tbody>
+</table>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Shadowsocks/">Shadowsocks</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-kali-linux" class="article article-type-post" itemscope itemprop="blogPost">
   
