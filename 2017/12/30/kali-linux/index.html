@@ -3,19 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | Nick&amp;Judy</title>
+  <title>U盘安装Kali Linux提示cd-rom无法挂载-解决方案 | Nick&amp;Judy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="用U盘安装Kali Linux的过程中，出现cd-rom无法挂载的现象，百度各种坑比的解答，最终找到一个可靠的解决方案。  Kali Linux提示cd-rom无法挂载1. 选择Execute shell,进入到shell窗口12$ df -m此时会看到挂载信息，最下面的是/dev/*** /media 这个是U盘设备挂载到了/media，导致cd-rom不能被挂载。 2. 卸载 /media1">
+<meta name="keywords" content="kali linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://ByX54192/ByX54192.github.io/2017/12/28/hello-world/index.html">
+<meta property="og:title" content="U盘安装Kali Linux提示cd-rom无法挂载-解决方案">
+<meta property="og:url" content="https://ByX54192/ByX54192.github.io/2017/12/30/kali-linux/index.html">
 <meta property="og:site_name" content="Nick&amp;Judy">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="用U盘安装Kali Linux的过程中，出现cd-rom无法挂载的现象，百度各种坑比的解答，最终找到一个可靠的解决方案。  Kali Linux提示cd-rom无法挂载1. 选择Execute shell,进入到shell窗口12$ df -m此时会看到挂载信息，最下面的是/dev/*** /media 这个是U盘设备挂载到了/media，导致cd-rom不能被挂载。 2. 卸载 /media1">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2017-12-28T10:11:34.506Z">
+<meta property="og:updated_time" content="2017-12-30T03:10:22.981Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="U盘安装Kali Linux提示cd-rom无法挂载-解决方案">
+<meta name="twitter:description" content="用U盘安装Kali Linux的过程中，出现cd-rom无法挂载的现象，百度各种坑比的解答，最终找到一个可靠的解决方案。  Kali Linux提示cd-rom无法挂载1. 选择Execute shell,进入到shell窗口12$ df -m此时会看到挂载信息，最下面的是/dev/*** /media 这个是U盘设备挂载到了/media，导致cd-rom不能被挂载。 2. 卸载 /media1">
   
     <link rel="alternative" href="/atom.xml" title="Nick&amp;Judy" type="application/atom+xml">
   
@@ -217,11 +218,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-kali-linux" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/12/28/hello-world/" class="article-date">
-      <time datetime="2017-12-28T10:11:34.506Z" itemprop="datePublished">2017-12-28</time>
+      <a href="/2017/12/30/kali-linux/" class="article-date">
+      <time datetime="2017-12-30T02:53:43.000Z" itemprop="datePublished">2017-12-30</time>
 </a>
     </div>
   
@@ -234,7 +235,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      U盘安装Kali Linux提示cd-rom无法挂载-解决方案
     </h1>
   
 
@@ -244,6 +245,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kali-linux/">kali linux</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -251,15 +256,14 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <blockquote>
+<p>用U盘安装Kali Linux的过程中，出现cd-rom无法挂载的现象，百度各种坑比的解答，最终找到一个可靠的解决方案。</p>
+</blockquote>
+<h2 id="Kali-Linux提示cd-rom无法挂载"><a href="#Kali-Linux提示cd-rom无法挂载" class="headerlink" title="Kali Linux提示cd-rom无法挂载"></a>Kali Linux提示cd-rom无法挂载</h2><h3 id="1-选择Execute-shell-进入到shell窗口"><a href="#1-选择Execute-shell-进入到shell窗口" class="headerlink" title="1. 选择Execute shell,进入到shell窗口"></a>1. 选择Execute shell,进入到shell窗口</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ df -m</span><br><span class="line">此时会看到挂载信息，最下面的是/dev/*** /media 这个是U盘设备挂载到了/media，导致<span class="built_in">cd</span>-rom不能被挂载。</span><br></pre></td></tr></table></figure>
+<h3 id="2-卸载-media"><a href="#2-卸载-media" class="headerlink" title="2. 卸载 /media"></a>2. 卸载 /media</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ umount /media</span><br></pre></td></tr></table></figure>
+<h3 id="3-退出，继续执行之前挂载CD-ROM的操作"><a href="#3-退出，继续执行之前挂载CD-ROM的操作" class="headerlink" title="3. 退出，继续执行之前挂载CD-ROM的操作"></a>3. 退出，继续执行之前挂载CD-ROM的操作</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  <span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p><em>祝大家元旦快乐！</em></p>
 
       
       
@@ -315,13 +319,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/12/28/hello-world/">Hello World</a></p>
+        <p><span>本文标题:</span><a href="/2017/12/30/kali-linux/">U盘安装Kali Linux提示cd-rom无法挂载-解决方案</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Nick.L 的个人博客">Nick.L</a></p>
-        <p><span>发布时间:</span>2017年12月28日 - 18时11分</p>
-        <p><span>最后更新:</span>2017年12月28日 - 18时11分</p>
+        <p><span>发布时间:</span>2017年12月30日 - 10时53分</p>
+        <p><span>最后更新:</span>2017年12月30日 - 11时10分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/12/28/hello-world/" title="Hello World">https://ByX54192/ByX54192.github.io/2017/12/28/hello-world/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://ByX54192/ByX54192.github.io/2017/12/28/hello-world/　　作者: Nick.L" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/12/30/kali-linux/" title="U盘安装Kali Linux提示cd-rom无法挂载-解决方案">https://ByX54192/ByX54192.github.io/2017/12/30/kali-linux/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://ByX54192/ByX54192.github.io/2017/12/30/kali-linux/　　作者: Nick.L" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -334,15 +338,11 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/12/28/VMTools/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          VMTools在Linux下配置详细
-        
-      </div>
-    </a>
   
+    <a href="/2017/12/28/FirstBlog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CTFd平台搭建</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -351,7 +351,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Kali-Linux提示cd-rom无法挂载"><span class="toc-number">1.</span> <span class="toc-text">Kali Linux提示cd-rom无法挂载</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-选择Execute-shell-进入到shell窗口"><span class="toc-number">1.1.</span> <span class="toc-text">1. 选择Execute shell,进入到shell窗口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-卸载-media"><span class="toc-number">1.2.</span> <span class="toc-text">2. 卸载 /media</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-退出，继续执行之前挂载CD-ROM的操作"><span class="toc-number">1.3.</span> <span class="toc-text">3. 退出，继续执行之前挂载CD-ROM的操作</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -417,13 +417,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/12/28/VMTools/" title="上一篇: VMTools在Linux下配置详细">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/12/28/FirstBlog/" title="下一篇: CTFd平台搭建">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/12/30/kali-linux/">U盘安装Kali Linux提示cd-rom无法挂载-解决方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/28/FirstBlog/">CTFd平台搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/28/VMTools/">VMTools在Linux下配置详细</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/28/hello-world/">Hello World</a></li></ul>

@@ -145,7 +145,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/CTF-d/" style="font-size: 10px;">CTF.d</a> <a href="/tags/VMTools/" style="font-size: 10px;">VMTools</a>
+                        <a href="/tags/CTF-d/" style="font-size: 10px;">CTF.d</a> <a href="/tags/VMTools/" style="font-size: 10px;">VMTools</a> <a href="/tags/kali-linux/" style="font-size: 10px;">kali linux</a>
                     </div>
                 </section>
                 
@@ -220,6 +220,72 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-kali-linux" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/12/30/kali-linux/" class="article-date">
+      <time datetime="2017-12-30T02:53:43.000Z" itemprop="datePublished">2017-12-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/30/kali-linux/">U盘安装Kali Linux提示cd-rom无法挂载-解决方案</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <blockquote>
+<p>用U盘安装Kali Linux的过程中，出现cd-rom无法挂载的现象，百度各种坑比的解答，最终找到一个可靠的解决方案。</p>
+</blockquote>
+<h2 id="Kali-Linux提示cd-rom无法挂载"><a href="#Kali-Linux提示cd-rom无法挂载" class="headerlink" title="Kali Linux提示cd-rom无法挂载"></a>Kali Linux提示cd-rom无法挂载</h2><h3 id="1-选择Execute-shell-进入到shell窗口"><a href="#1-选择Execute-shell-进入到shell窗口" class="headerlink" title="1. 选择Execute shell,进入到shell窗口"></a>1. 选择Execute shell,进入到shell窗口</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ df -m</span><br><span class="line">此时会看到挂载信息，最下面的是/dev/*** /media 这个是U盘设备挂载到了/media，导致<span class="built_in">cd</span>-rom不能被挂载。</span><br></pre></td></tr></table></figure>
+<h3 id="2-卸载-media"><a href="#2-卸载-media" class="headerlink" title="2. 卸载 /media"></a>2. 卸载 /media</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ umount /media</span><br></pre></td></tr></table></figure>
+<h3 id="3-退出，继续执行之前挂载CD-ROM的操作"><a href="#3-退出，继续执行之前挂载CD-ROM的操作" class="headerlink" title="3. 退出，继续执行之前挂载CD-ROM的操作"></a>3. 退出，继续执行之前挂载CD-ROM的操作</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  <span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p><em>祝大家元旦快乐！</em></p>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kali-linux/">kali linux</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-FirstBlog" class="article article-type-post" itemscope itemprop="blogPost">
   
