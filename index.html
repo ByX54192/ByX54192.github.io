@@ -145,7 +145,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/CTF-d/" style="font-size: 10px;">CTF.d</a> <a href="/tags/SQL-Injection/" style="font-size: 10px;">SQL Injection</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/VMTools/" style="font-size: 10px;">VMTools</a> <a href="/tags/kali-linux/" style="font-size: 10px;">kali linux</a>
+                        <a href="/tags/CTF-d/" style="font-size: 10px;">CTF.d</a> <a href="/tags/SQL-Injection/" style="font-size: 10px;">SQL Injection</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/VMTools/" style="font-size: 10px;">VMTools</a> <a href="/tags/kali-linux/" style="font-size: 10px;">kali linux</a> <a href="/tags/内网渗透命令/" style="font-size: 10px;">内网渗透命令</a>
                     </div>
                 </section>
                 
@@ -220,6 +220,73 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-SuperCommand" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/12/30/SuperCommand/" class="article-date">
+      <time datetime="2017-12-30T07:23:21.000Z" itemprop="datePublished">2017-12-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/30/SuperCommand/">SuperCommand</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="内网渗透命令收藏"><a href="#内网渗透命令收藏" class="headerlink" title="内网渗透命令收藏"></a>内网渗透命令收藏</h2><blockquote>
+<p>这里收藏了在内网渗透时常用的命令</p>
+<h3 id="命令列表"><a href="#命令列表" class="headerlink" title="命令列表"></a>命令列表</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">ipconfig /all                      ------ 查询本机IP段，所在域等</span><br><span class="line">net user                           ------ 本机用户列表</span><br><span class="line">net localhroup administrators      ------ 本机管理员[通常含有域用户]</span><br><span class="line">net user /domain                   ------ 查询域用户</span><br><span class="line">net group /domain                  ------ 查询域里面的工作组</span><br><span class="line">net group <span class="string">"domain admins"</span> /domain  ------ 查询域管理员用户组</span><br><span class="line">net localgroup administrators /domain    ------ 登录本机的域管理员</span><br><span class="line">net localgroup administrators workgroup\user001 /add   ------域用户添加到本机</span><br><span class="line">net group <span class="string">"domain controllers"</span> /domain                         ------ 查看域控制器(如果有多台)</span><br><span class="line">net time /domain          ------ 判断主域，主域服务器都做时间服务器</span><br><span class="line">net config workstation   ------ 当前登录域</span><br><span class="line">net session                  ------ 查看当前会话</span><br><span class="line">net use \\ip\ipc$ pawword /user:username      ------ 建立IPC会话[空连接-***]</span><br><span class="line">net share                    ------  查看SMB指向的路径[即共享]</span><br><span class="line">net view                      ------ 查询同一域内机器列表</span><br><span class="line">net view \\ip                ------ 查询某IP共享</span><br><span class="line">net view /domain         ------ 查询域列表</span><br><span class="line">net view /domain:domainname        ------ 查看workgroup域中计算机列表</span><br><span class="line">net start                                         ------ 查看当前运行的服务</span><br><span class="line">net accounts                                   ------  查看本地密码策略</span><br><span class="line">net accounts /domain                      ------  查看域密码策略</span><br><span class="line">nbtstat –A ip                                   ------netbios 查询</span><br><span class="line">netstat –an/ano/anb                        ------ 网络连接查询</span><br><span class="line">route <span class="built_in">print</span>                                      ------ 路由表</span><br></pre></td></tr></table></figure>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">dsquery computer       ----- finds computers <span class="keyword">in</span> the directory.</span><br><span class="line">dsquery contact           ----- finds contacts <span class="keyword">in</span> thedirectory.</span><br><span class="line">dsquery subnet            ----- finds subnets <span class="keyword">in</span> thedirectory.</span><br><span class="line">dsquery group             ----- finds groups <span class="keyword">in</span> thedirectory.</span><br><span class="line">dsquery ou                   ----- finds organizationalunits <span class="keyword">in</span> the directory.</span><br><span class="line">dsquery site                 ----- finds sites <span class="keyword">in</span> thedirectory.</span><br><span class="line">dsquery server             ----- finds domain controllers inthe directory.</span><br><span class="line">dsquery user                ----- finds users <span class="keyword">in</span> thedirectory.</span><br><span class="line">dsquery quota              ----- finds quota specificationsin the directory.</span><br><span class="line">dsquery partition         ----- finds partitions <span class="keyword">in</span> thedirectory.</span><br><span class="line">dsquery *                     ----- finds any object inthe directory by using a generic LDAP query.</span><br><span class="line">dsquery server –domain Yahoo.com | dsget server–dnsname –site ---搜索域内域控制器的DNS主机名和站点名</span><br><span class="line">dsquery computer domainroot –name *-xp –<span class="built_in">limit</span> 10----- 搜索域内以-xp结尾的机器10台</span><br><span class="line">dsquery user domainroot –name admin* -<span class="built_in">limit</span> ---- 搜索域内以admin开头的用户10个</span><br></pre></td></tr></table></figure>
+<p><strong>注:dsquery来源于Windows Server 2003 Administration Tools Pack</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">tasklist /V                                                      ----- 查看进程[显示对应用户]</span><br><span class="line">tasklist /S ip /U domain\username /P /V             ----- 查看远程计算机进程列表</span><br><span class="line">qprocess *                                                    ----- 类似tasklist</span><br><span class="line">qprocess /SERVER:IP                                      ----- 远程查看计算机进程列表</span><br><span class="line">nslookup –qt-MX Yahoo.com                           ----- 查看邮件服务器</span><br><span class="line">whoami /all                                                   ----- 查询当前用户权限等</span><br><span class="line"><span class="built_in">set</span>                                                              ----- 查看系统环境变量</span><br><span class="line">systeminfo                                                    ----- 查看系统信息</span><br><span class="line">qwinsta                                                        ----- 查看登录情况</span><br><span class="line">qwinsta /SERVER:IP                                       ----- 查看远程登录情况</span><br><span class="line">fsutil fsinfo drives                                           ----- 查看所有盘符</span><br><span class="line">gpupdate /force                                            ----- 更新</span><br></pre></td></tr></table></figure></p>
+<h3 id="域策略"><a href="#域策略" class="headerlink" title="域策略"></a>域策略</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">wmic bios                                      -----看bios信息</span><br><span class="line">wmic qfe                                           ----- 查看补丁信息</span><br><span class="line">wmic qfe get hotfixid                                     ----- 查看补丁-Patch号</span><br><span class="line">wmic startup                                                 ----- 查看启动项</span><br><span class="line">wmic service                                                 ----- 查看服务</span><br><span class="line">wmic os                                                       ----- 查看OS信息</span><br><span class="line">wmic process get caption,executablepath,commandline</span><br><span class="line">wmic process call create “process_name” (executes a program)</span><br><span class="line">wmic process <span class="built_in">where</span> name=”process_name” call terminate (terminates program)</span><br><span class="line">wmic logicaldisk <span class="built_in">where</span> drivetype=3 get name, freespace, systemname, filesystem, size,</span><br><span class="line">volumeserialnumber (hard drive information)</span><br><span class="line">wmic useraccount (usernames, sid, and various security related goodies)</span><br><span class="line">wmic useraccount get /ALL</span><br><span class="line">wmic share get /ALL (you can use ? <span class="keyword">for</span> gets <span class="built_in">help</span> ! )</span><br><span class="line">wmic startup list full (this can be a huge list!!!)</span><br><span class="line">wmic /node:<span class="string">"hostname"</span> bios get serialnumber (this can be great <span class="keyword">for</span> finding warranty info about target)</span><br></pre></td></tr></table></figure>
+<hr>
+<p><strong>元旦快乐哈，童鞋们！</strong></p>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/内网渗透命令/">内网渗透命令</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-SQLInjection" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -421,75 +488,9 @@
 
 
   
-    <article id="post-kali-linux" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/12/30/kali-linux/" class="article-date">
-      <time datetime="2017-12-30T02:53:43.000Z" itemprop="datePublished">2017-12-30</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/30/kali-linux/">U盘安装Kali Linux提示cd-rom无法挂载-解决方案</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <blockquote>
-<p>用U盘安装Kali Linux的过程中，出现cd-rom无法挂载的现象，百度各种坑比的解答，最终找到一个可靠的解决方案。</p>
-</blockquote>
-<h2 id="Kali-Linux提示cd-rom无法挂载"><a href="#Kali-Linux提示cd-rom无法挂载" class="headerlink" title="Kali Linux提示cd-rom无法挂载"></a>Kali Linux提示cd-rom无法挂载</h2><h3 id="1-选择Execute-shell-进入到shell窗口"><a href="#1-选择Execute-shell-进入到shell窗口" class="headerlink" title="1. 选择Execute shell,进入到shell窗口"></a>1. 选择Execute shell,进入到shell窗口</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ df -m</span><br><span class="line">此时会看到挂载信息，最下面的是/dev/*** /media 这个是U盘设备挂载到了/media，导致<span class="built_in">cd</span>-rom不能被挂载。</span><br></pre></td></tr></table></figure>
-<h3 id="2-卸载-media"><a href="#2-卸载-media" class="headerlink" title="2. 卸载 /media"></a>2. 卸载 /media</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ umount /media</span><br></pre></td></tr></table></figure>
-<h3 id="3-退出，继续执行之前挂载CD-ROM的操作"><a href="#3-退出，继续执行之前挂载CD-ROM的操作" class="headerlink" title="3. 退出，继续执行之前挂载CD-ROM的操作"></a>3. 退出，继续执行之前挂载CD-ROM的操作</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  <span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
-<hr>
-<p><em>祝大家元旦快乐！</em></p>
-
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kali-linux/">kali linux</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 </div>
