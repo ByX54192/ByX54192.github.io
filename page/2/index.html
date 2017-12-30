@@ -145,7 +145,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/CTF-d/" style="font-size: 10px;">CTF.d</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/VMTools/" style="font-size: 10px;">VMTools</a> <a href="/tags/kali-linux/" style="font-size: 10px;">kali linux</a>
+                        <a href="/tags/CTF-d/" style="font-size: 10px;">CTF.d</a> <a href="/tags/SQL-Injection/" style="font-size: 10px;">SQL Injection</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/VMTools/" style="font-size: 10px;">VMTools</a> <a href="/tags/kali-linux/" style="font-size: 10px;">kali linux</a>
                     </div>
                 </section>
                 
@@ -271,6 +271,73 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF-d/">CTF.d</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-VMTools" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/12/28/VMTools/" class="article-date">
+      <time datetime="2017-12-28T14:03:05.000Z" itemprop="datePublished">2017-12-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/28/VMTools/">VMTools在Linux下配置详细</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <blockquote>
+<p>在虚拟机上装linux系统玩，总会碰到VMtools安装失败的问题，所以特意记录一下，方便自己使用。</p>
+</blockquote>
+<h2 id="Do-it"><a href="#Do-it" class="headerlink" title="Do it"></a>Do it</h2><h3 id="1-创建一个挂载点"><a href="#1-创建一个挂载点" class="headerlink" title="1. 创建一个挂载点"></a>1. 创建一个挂载点</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ root@kali:~<span class="comment"># mkdir /mnt/cdrom/</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-挂载安装程序"><a href="#2-挂载安装程序" class="headerlink" title="2. 挂载安装程序"></a>2. 挂载安装程序</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ root@kali:~<span class="comment"># mount /dev/cdrom /mnt/cdrom/</span></span><br><span class="line">输出mount: block device /dev/sr0 is write-protected, mounting <span class="built_in">read</span>-only</span><br></pre></td></tr></table></figure>
+<h3 id="3-切换目录"><a href="#3-切换目录" class="headerlink" title="3. 切换目录"></a>3. 切换目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  root@kali:~<span class="comment"># cd /mnt/cdrom/</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-解压VMTools-安装程序"><a href="#4-解压VMTools-安装程序" class="headerlink" title="4. 解压VMTools 安装程序"></a>4. 解压VMTools 安装程序</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ root@kali:~<span class="comment"># tar zxvf VMwareTools-9.6.1-1378637.tar.gz -C/</span></span><br></pre></td></tr></table></figure>
+<h3 id="5-切换目录"><a href="#5-切换目录" class="headerlink" title="5. 切换目录"></a>5. 切换目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ root@kali:~<span class="comment"># cd /vmware-tools-distrib/</span></span><br></pre></td></tr></table></figure>
+<h3 id="6-运行安装程序"><a href="#6-运行安装程序" class="headerlink" title="6. 运行安装程序"></a>6. 运行安装程序</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ root@kali:~<span class="comment"># ./vmware-install.pl</span></span><br></pre></td></tr></table></figure>
+<h2 id="正值周末，祝大家周末愉快！"><a href="#正值周末，祝大家周末愉快！" class="headerlink" title="正值周末，祝大家周末愉快！"></a>正值周末，祝大家周末愉快！</h2>
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VMTools/">VMTools</a></li></ul>
     </div>
 
       
